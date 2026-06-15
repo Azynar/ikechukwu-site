@@ -1,3 +1,5 @@
+import FadeUp from "@/components/ui/FadeUp";
+
 const milestones = [
   {
     year: "2014",
@@ -44,94 +46,120 @@ export default function AboutJourney() {
 
         {/* Header */}
         <div style={{ marginBottom: "4rem" }}>
-          <div className="tag-pill" style={{ marginBottom: "1rem" }}>The Journey</div>
-          <h2 style={{
-            fontFamily: "var(--font-display)",
-            fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
-            fontWeight: 700,
-            color: "var(--ink)",
-            lineHeight: 1.2,
-            maxWidth: "480px",
-          }}>
-            Milestones that shaped the mission.
-          </h2>
+          <FadeUp delay={0}>
+            <div className="tag-pill" style={{ marginBottom: "1rem" }}>
+              The Journey
+            </div>
+          </FadeUp>
+          <FadeUp delay={0.1}>
+            <h2
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
+                fontWeight: 700,
+                color: "var(--ink)",
+                lineHeight: 1.2,
+                maxWidth: "480px",
+              }}
+            >
+              Milestones that shaped the mission.
+            </h2>
+          </FadeUp>
         </div>
 
         {/* Timeline */}
         <div style={{ position: "relative" }}>
 
           {/* Vertical line */}
-          <div style={{
-            position: "absolute",
-            left: "80px",
-            top: 0,
-            bottom: 0,
-            width: "1px",
-            background: "linear-gradient(to bottom, var(--brand-green), transparent)",
-          }} className="timeline-line" />
+          <div
+            style={{
+              position: "absolute",
+              left: "80px",
+              top: 0,
+              bottom: 0,
+              width: "1px",
+              background: "linear-gradient(to bottom, var(--brand-green), transparent)",
+            }}
+            className="timeline-line"
+          />
 
           <div style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
             {milestones.map((m, i) => (
-              <div key={i} style={{
-                display: "grid",
-                gridTemplateColumns: "80px 1fr",
-                gap: "2.5rem",
-                alignItems: "start",
-                position: "relative",
-              }} className="timeline-item">
+              <FadeUp key={i} delay={i * 0.1}>
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "80px 1fr",
+                    gap: "2.5rem",
+                    alignItems: "start",
+                    position: "relative",
+                  }}
+                  className="timeline-item"
+                >
+                  {/* Year */}
+                  <div style={{ textAlign: "right", paddingTop: "0.2rem" }}>
+                    <span
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "0.78rem",
+                        fontWeight: 700,
+                        color: "var(--brand-green)",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      {m.year}
+                    </span>
+                  </div>
 
-                {/* Year */}
-                <div style={{ textAlign: "right", paddingTop: "0.2rem" }}>
-                  <span style={{
-                    fontFamily: "var(--font-mono)",
-                    fontSize: "0.78rem",
-                    fontWeight: 700,
-                    color: "var(--brand-green)",
-                    letterSpacing: "0.05em",
-                  }}>
-                    {m.year}
-                  </span>
+                  {/* Content */}
+                  <div
+                    style={{
+                      background: "#fff",
+                      border: "1px solid rgba(0,0,0,0.07)",
+                      borderRadius: "12px",
+                      padding: "1.75rem",
+                      position: "relative",
+                    }}
+                  >
+                    {/* Dot on the line */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        left: "-2.85rem",
+                        top: "1.6rem",
+                        width: "10px",
+                        height: "10px",
+                        borderRadius: "50%",
+                        background: i === milestones.length - 1
+                          ? "var(--brand-green)"
+                          : "#fff",
+                        border: "2px solid var(--brand-green)",
+                      }}
+                    />
+
+                    <h3
+                      style={{
+                        fontFamily: "var(--font-display)",
+                        fontSize: "1.1rem",
+                        fontWeight: 700,
+                        color: "var(--ink)",
+                        marginBottom: "0.65rem",
+                      }}
+                    >
+                      {m.title}
+                    </h3>
+                    <p
+                      style={{
+                        fontSize: "0.9rem",
+                        color: "var(--muted)",
+                        lineHeight: 1.75,
+                      }}
+                    >
+                      {m.description}
+                    </p>
+                  </div>
                 </div>
-
-                {/* Content */}
-                <div style={{
-                  background: "#fff",
-                  border: "1px solid rgba(0,0,0,0.07)",
-                  borderRadius: "12px",
-                  padding: "1.75rem",
-                  position: "relative",
-                }}>
-                  {/* Dot on the line */}
-                  <div style={{
-                    position: "absolute",
-                    left: "-2.85rem",
-                    top: "1.6rem",
-                    width: "10px",
-                    height: "10px",
-                    borderRadius: "50%",
-                    background: i === milestones.length - 1 ? "var(--brand-green)" : "#fff",
-                    border: "2px solid var(--brand-green)",
-                  }} />
-
-                  <h3 style={{
-                    fontFamily: "var(--font-display)",
-                    fontSize: "1.1rem",
-                    fontWeight: 700,
-                    color: "var(--ink)",
-                    marginBottom: "0.65rem",
-                  }}>
-                    {m.title}
-                  </h3>
-                  <p style={{
-                    fontSize: "0.9rem",
-                    color: "var(--muted)",
-                    lineHeight: 1.75,
-                  }}>
-                    {m.description}
-                  </p>
-                </div>
-
-              </div>
+              </FadeUp>
             ))}
           </div>
         </div>
@@ -140,7 +168,7 @@ export default function AboutJourney() {
 
       <style>{`
         @media (max-width: 640px) {
-          .timeline-line { left: 0 !important; display: none; }
+          .timeline-line { display: none; }
           .timeline-item { grid-template-columns: 1fr !important; gap: 0.5rem !important; }
         }
       `}</style>
