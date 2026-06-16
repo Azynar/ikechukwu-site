@@ -63,8 +63,8 @@ export default function AboutHero() {
                   marginBottom: "1.5rem",
                 }}
               >
-                Agripreneur.<br />
-                Advocate.<br />
+                Innovator.<br />
+                Entrepreneur.<br />
                 <span style={{ color: "var(--brand-green)" }}>Changemaker.</span>
               </h1>
             </FadeUp>
@@ -78,10 +78,11 @@ export default function AboutHero() {
                   maxWidth: "480px",
                 }}
               >
-                Ikechukwu Kingsley Amajuoyi has spent his career at the
-                intersection of agriculture, food safety, and systems thinking
-                — building solutions that go beyond profit to protect the people
-                who depend on Nigeria&apos;s food supply every day.
+                Ikechukwu Kingsley Amajuoyi has spent over a decade at the
+                intersection of agribusiness, climate action, and systems
+                thinking — building ventures and ecosystems that improve
+                livelihoods, strengthen food systems, and unlock Africa&apos;s
+                agricultural potential at scale.
               </p>
             </FadeUp>
           </div>
@@ -109,9 +110,10 @@ export default function AboutHero() {
                 }}
               >
                 <Image
-                  src="/about-image.jpg"
+                  src="/hero-image.jpeg"
                   alt="Ikechukwu Amajuoyi"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: "cover", objectPosition: "center top" }}
                   priority
                 />

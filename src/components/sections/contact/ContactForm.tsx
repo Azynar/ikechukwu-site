@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
-import { MdOutlineEmail } from "react-icons/md";
-import { FaXTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
+import { MdOutlineEmail, MdOutlinePhone } from "react-icons/md";
+import { FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 import FadeUp from "@/components/ui/FadeUp";
 
 const subjects = [
@@ -11,7 +11,26 @@ const subjects = [
   "Speaking Engagement",
   "Partnership & Investment",
   "Food Safety Advocacy",
+  "Climate & Sustainability",
   "Other",
+];
+
+const socials = [
+  {
+    href: "https://linkedin.com/in/ikechukwu-amajuoyi-b6a977a1",
+    label: "LinkedIn",
+    icon: <FaLinkedinIn size={16} />,
+  },
+  {
+    href: "https://wa.me/2347038490615",
+    label: "WhatsApp",
+    icon: <FaWhatsapp size={16} />,
+  },
+  {
+    href: "mailto:a.ikechukwu@gmail.com",
+    label: "Email",
+    icon: <MdOutlineEmail size={16} />,
+  },
 ];
 
 export default function ContactForm() {
@@ -85,7 +104,7 @@ export default function ContactForm() {
                   display: "flex",
                   alignItems: "center",
                   gap: "0.85rem",
-                  marginBottom: "2.5rem",
+                  marginBottom: "1.25rem",
                 }}
               >
                 <div
@@ -117,14 +136,66 @@ export default function ContactForm() {
                     Email
                   </p>
                   
-                   <a href="mailto:hello@ikechukwuamajuoyi.com"
+                  <a  href="mailto:a.ikechukwu@gmail.com"
                     style={{
                       fontSize: "0.92rem",
                       color: "var(--ink)",
                       textDecoration: "none",
                       fontWeight: 500,
-                    }}>
-                    hello@ikechukwuamajuoyi.com
+                    }}
+                  >
+                    a.ikechukwu@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.85rem",
+                  marginBottom: "2.5rem",
+                }}
+              >
+                <div
+                  style={{
+                    width: "42px",
+                    height: "42px",
+                    borderRadius: "8px",
+                    background: "rgba(59,181,74,0.1)",
+                    border: "1px solid rgba(59,181,74,0.2)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                  }}
+                >
+                  <MdOutlinePhone size={20} color="var(--brand-green)" />
+                </div>
+                <div>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "0.68rem",
+                      letterSpacing: "0.1em",
+                      textTransform: "uppercase",
+                      color: "var(--muted)",
+                      marginBottom: "0.2rem",
+                    }}
+                  >
+                    Phone & WhatsApp
+                  </p>
+                  
+                  <a  href="tel:+2347038490615"
+                    style={{
+                      fontSize: "0.92rem",
+                      color: "var(--ink)",
+                      textDecoration: "none",
+                      fontWeight: 500,
+                    }}
+                  >
+                    +234 703 849 0615
                   </a>
                 </div>
               </div>
@@ -146,105 +217,45 @@ export default function ContactForm() {
                     marginBottom: "1rem",
                   }}
                 >
-                  Follow Along
+                  Connect
                 </p>
 
                 <div style={{ display: "flex", gap: "0.75rem" }}>
-                  
-                  <a  href="https://x.com/placeholder"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="X (Twitter)"
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "8px",
-                      border: "1px solid rgba(0,0,0,0.1)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "var(--ink)",
-                      textDecoration: "none",
-                      transition: "border-color 0.2s, color 0.2s, background 0.2s",
-                    }}
-                    onMouseEnter={e => {
-                      const el = e.currentTarget as HTMLAnchorElement;
-                      el.style.borderColor = "var(--brand-green)";
-                      el.style.color = "var(--brand-green)";
-                      el.style.background = "rgba(59,181,74,0.05)";
-                    }}
-                    onMouseLeave={e => {
-                      const el = e.currentTarget as HTMLAnchorElement;
-                      el.style.borderColor = "rgba(0,0,0,0.1)";
-                      el.style.color = "var(--ink)";
-                      el.style.background = "transparent";
-                    }}>
-                    <FaXTwitter size={16} />
-                  </a>
-
-                  
-                  <a href="https://linkedin.com/placeholder"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "8px",
-                      border: "1px solid rgba(0,0,0,0.1)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "var(--ink)",
-                      textDecoration: "none",
-                      transition: "border-color 0.2s, color 0.2s, background 0.2s",
-                    }}
-                    onMouseEnter={e => {
-                      const el = e.currentTarget as HTMLAnchorElement;
-                      el.style.borderColor = "var(--brand-green)";
-                      el.style.color = "var(--brand-green)";
-                      el.style.background = "rgba(59,181,74,0.05)";
-                    }}
-                    onMouseLeave={e => {
-                      const el = e.currentTarget as HTMLAnchorElement;
-                      el.style.borderColor = "rgba(0,0,0,0.1)";
-                      el.style.color = "var(--ink)";
-                      el.style.background = "transparent";
-                    }}>
-                    <FaLinkedinIn size={16} />
-                  </a>
-
-                  
-                  <a href="https://instagram.com/placeholder"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "8px",
-                      border: "1px solid rgba(0,0,0,0.1)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "var(--ink)",
-                      textDecoration: "none",
-                      transition: "border-color 0.2s, color 0.2s, background 0.2s",
-                    }}
-                    onMouseEnter={e => {
-                      const el = e.currentTarget as HTMLAnchorElement;
-                      el.style.borderColor = "var(--brand-green)";
-                      el.style.color = "var(--brand-green)";
-                      el.style.background = "rgba(59,181,74,0.05)";
-                    }}
-                    onMouseLeave={e => {
-                      const el = e.currentTarget as HTMLAnchorElement;
-                      el.style.borderColor = "rgba(0,0,0,0.1)";
-                      el.style.color = "var(--ink)";
-                      el.style.background = "transparent";
-                    }}>
-                    <FaInstagram size={16} />
-                  </a>
+                  {socials.map(({ href, label, icon }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={label}
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                        borderRadius: "8px",
+                        border: "1px solid rgba(0,0,0,0.1)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: "var(--ink)",
+                        textDecoration: "none",
+                        transition: "border-color 0.2s, color 0.2s, background 0.2s",
+                      }}
+                      onMouseEnter={e => {
+                        const el = e.currentTarget as HTMLAnchorElement;
+                        el.style.borderColor = "var(--brand-green)";
+                        el.style.color = "var(--brand-green)";
+                        el.style.background = "rgba(59,181,74,0.05)";
+                      }}
+                      onMouseLeave={e => {
+                        const el = e.currentTarget as HTMLAnchorElement;
+                        el.style.borderColor = "rgba(0,0,0,0.1)";
+                        el.style.color = "var(--ink)";
+                        el.style.background = "transparent";
+                      }}
+                    >
+                      {icon}
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
@@ -258,7 +269,8 @@ export default function ContactForm() {
                 border: "1px solid rgba(0,0,0,0.07)",
                 borderRadius: "16px",
                 padding: "2.5rem",
-              }}>
+              }}
+            >
               {submitted ? (
                 <div style={{ textAlign: "center", padding: "3rem 0" }}>
                   <div
@@ -273,7 +285,8 @@ export default function ContactForm() {
                       justifyContent: "center",
                       margin: "0 auto 1.5rem",
                       fontSize: "1.5rem",
-                    }}>
+                    }}
+                  >
                     ✓
                   </div>
                   <h3
@@ -283,7 +296,8 @@ export default function ContactForm() {
                       fontWeight: 700,
                       color: "var(--ink)",
                       marginBottom: "0.75rem",
-                    }}>
+                    }}
+                  >
                     Message sent.
                   </h3>
                   <p
@@ -291,9 +305,10 @@ export default function ContactForm() {
                       fontSize: "0.92rem",
                       color: "var(--muted)",
                       lineHeight: 1.7,
-                    }}>
-                      Thank you for reaching out. Ikechukwu will get back to you
-                      within 48 hours.
+                    }}
+                  >
+                    Thank you for reaching out. Ikechukwu will get back
+                    to you within 48 hours.
                   </p>
                 </div>
               ) : (

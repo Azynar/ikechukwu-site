@@ -39,9 +39,10 @@ export default function BioStrip() {
                 }}
               >
                 <Image
-                  src="/bio-image.jpg"
+                  src="/bio-image.jpeg"
                   alt="Ikechukwu Amajuoyi"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: "cover", objectPosition: "center top" }}
                 />
               </div>
@@ -67,14 +68,14 @@ export default function BioStrip() {
                   marginBottom: "1.5rem",
                 }}
               >
-                One man&apos;s fight to clean up{" "}
+                Building businesses that{" "}
                 <span
                   style={{
                     borderBottom: "3px solid var(--near-black)",
                     paddingBottom: "2px",
                   }}
                 >
-                  Africa&apos;s food systems.
+                  feed Africa right.
                 </span>
               </h2>
             </FadeUp>
@@ -88,9 +89,11 @@ export default function BioStrip() {
                   fontSize: "0.97rem",
                 }}
               >
-                Ikechukwu Kingsley Amajuoyi is a Nigerian agripreneur with a degree in
-                Industrial Chemistry from FUTO and advanced agribusiness training from
-                Nexford University, FATE Foundation, and GIZ.
+                Ikechukwu Kingsley Amajuoyi is a Nigerian agribusiness innovator
+                and climate entrepreneur with over a decade of experience
+                transforming Africa&apos;s agricultural sector. He holds a Bachelor&apos;s
+                in Industrial Chemistry, a Postgraduate qualification in
+                Environmental Chemistry, and an MBA.
               </p>
             </FadeUp>
 
@@ -103,11 +106,10 @@ export default function BioStrip() {
                   fontSize: "0.97rem",
                 }}
               >
-                He co-founded KR Foods (Kernelinc Resources Ltd) to tackle one of
-                Nigeria&apos;s most dangerous food safety crises — the widespread adulteration
-                of palm oil with Sudan IV dye, a carcinogenic industrial chemical. Today,
-                KR Foods produces safe, traceable palm oil while building sustainable
-                agro-processing systems across the value chain.
+                As Founder and CEO of KR Foods and the visionary behind PalmLoop,
+                he is pioneering solutions that combine profitability with
+                environmental sustainability — proving that business can be a
+                powerful force for social and climate impact across Africa.
               </p>
             </FadeUp>
 

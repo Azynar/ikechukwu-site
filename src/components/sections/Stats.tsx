@@ -1,10 +1,10 @@
 import FadeUp from "@/components/ui/FadeUp";
 
 const stats = [
-  { value: "2018",     label: "Founded KR Foods"            },
-  { value: "Top SME",  label: "Recognised in Nigeria, 2020" },
-  { value: "NEPC",     label: "Registered BDS Provider"     },
-  { value: "AFC",      label: "African Food Changemaker"     },
+  { value: "10+",       label: "Years in Agribusiness"          },
+  { value: "60",        label: "Farmer & Processor Clusters"    },
+  { value: "2 Ventures", label: "KR Foods & PalmLoop"           },
+  { value: "AFC",       label: "Value Chain Ambassador"         },
 ];
 
 export default function Stats() {
